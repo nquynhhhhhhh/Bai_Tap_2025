@@ -11,13 +11,16 @@ public class LocatorsCRM {
     public static String alertErrorMessage = "//div[@id='alerts']/div";
 
     //New Customer
+    //kh nên chọn thẻ select => thẻ trung gian ngầm lưu giữ value => chọn button/ div
     public static String tabCustomerDetails = "//a[normalize-space()='Customer Details']/preceding::hi4";
     public static String inputCompany = "//input[@id='company']";
     public static String inputVAT = "//input[@id='vat']";
     public static String inputPhoneNumber = "//input[@id='phonenumber']";
     public static String inputWebsite = "//input[@id='website']";
-    public static String selectGroup = "//select[contains(@id,'groups_in')]";
+    public static String dropdownGroup = "//button[@data-id='groups_in[]']";
     public static String addGroup = "//div[@class='input-group-btn']";
+    public static String inputSearchGroup = "//button[@data-id='groups_in[]']/following-sibling::div//input";
+
     public static String selectCurrency = "//select[@id='default_currency']";
     public static String selectDefaultLanguage = "//select[@id='default_language']";
     public static String inputAddress = "//textarea[@id='address']";
@@ -26,7 +29,8 @@ public class LocatorsCRM {
     public static String inputZip = "//input[@id='zip']";
     public static String selectCountry = "//select[@id='country']";
     public static String buttonSaveAndCreate = "//button[normalize-space()='Save and create contact']";
-    public static String buttonSave = "//button[normalize-space()='Save']";
+    //=> có khả năng button bị trùng nên dùng thẻ div trên nó có id//button sẽ chuẩn hơn
+    public static String buttonSave = "//div[@id='profile-save-section']//button[normalize-space()='Save']";
     public static String errorCompany = "//p[@id='company-error']";
 
     //Project
